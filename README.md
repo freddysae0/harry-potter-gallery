@@ -1,6 +1,6 @@
 # Harry Potter Gallery
 
-> [▶️ Watch demo video](docs/demo.mov)
+![](docs/demo.gif)
 
 An interactive 3D gallery of Harry Potter-themed images, built with Three.js (WebGPU) and TypeScript.
 
