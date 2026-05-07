@@ -1,11 +1,17 @@
-import { create } from 'zustand'
+import { createStore } from 'zustand/vanilla'
 
 interface AppState {
-  rotationSpeed: number
-  setRotationSpeed: (speed: number) => void
+  ready: boolean
+  totalCount: number
+  loadedCount: number
+  wallWidth: number
+  wallHeight: number
 }
 
-export const useStore = create<AppState>((set) => ({
-  rotationSpeed: 1,
-  setRotationSpeed: (speed: number) => set({ rotationSpeed: speed }),
+export const store = createStore<AppState>(() => ({
+  ready: false,
+  totalCount: 0,
+  loadedCount: 0,
+  wallWidth: 40,
+  wallHeight: 28,
 }))
